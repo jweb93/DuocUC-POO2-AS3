@@ -12,9 +12,9 @@ import java.awt.*;
  * repartidores y entregas.
  */
 public class VentanaPrincipal extends JFrame {
-    private JButton btnRegistrarRepartidores;
-    private JButton btnListarPedidos;
-    private JButton btnRegistrarEntregas;
+    private JButton btnGestionarRepartidores;
+    private JButton btnGestionarPedidos;
+    private JButton btnGestionarEntregas;
     private ControladorRepartidores controladorRepartidores;
     private ControladorPedidos controladorPedidos;
     private ControladorEntregas controladorEntregas;
@@ -37,19 +37,19 @@ public class VentanaPrincipal extends JFrame {
         JPanel panelBotones = new JPanel(new GridLayout(3, 1));
         panelBotones.setBorder(BorderFactory.createEmptyBorder(20, 30, 20, 30));
 
-        btnRegistrarRepartidores = new JButton("Gestión de Repartidores");
-        btnListarPedidos = new JButton("Gestión de Pedidos");
-        btnRegistrarEntregas = new JButton("Gestión de Entregas");
+        btnGestionarRepartidores = new JButton("Gestión de Repartidores");
+        btnGestionarPedidos = new JButton("Gestión de Pedidos");
+        btnGestionarEntregas = new JButton("Gestión de Entregas");
 
-        panelBotones.add(btnRegistrarRepartidores);
-        panelBotones.add(btnListarPedidos);
-        panelBotones.add(btnRegistrarEntregas);
+        panelBotones.add(btnGestionarRepartidores);
+        panelBotones.add(btnGestionarPedidos);
+        panelBotones.add(btnGestionarEntregas);
 
         add(panelBotones, BorderLayout.CENTER);
 
         // Acciones de los botones
 
-        btnRegistrarRepartidores.addActionListener(e -> {
+        btnGestionarRepartidores.addActionListener(e -> {
             SwingUtilities.invokeLater(() -> {
                 VentanaGestionRepartidores ventanaGestionRepartidores = new VentanaGestionRepartidores(controladorRepartidores);
                 ventanaGestionRepartidores.setLocationRelativeTo(this);
@@ -57,7 +57,7 @@ public class VentanaPrincipal extends JFrame {
             });
         });
 
-        btnListarPedidos.addActionListener(e -> {
+        btnGestionarPedidos.addActionListener(e -> {
             SwingUtilities.invokeLater(() -> {
                 VentanaGestionPedidos ventanaGestionPedidos = new VentanaGestionPedidos(controladorPedidos);
                 ventanaGestionPedidos.setLocationRelativeTo(this);
@@ -65,11 +65,11 @@ public class VentanaPrincipal extends JFrame {
             });
         });
 
-        btnRegistrarEntregas.addActionListener(e -> {
+        btnGestionarEntregas.addActionListener(e -> {
             SwingUtilities.invokeLater(() -> {
-                VentanaRegistroEntregas ventanaRegistroEntregas = new VentanaRegistroEntregas(controladorEntregas, controladorPedidos, controladorRepartidores);
-                ventanaRegistroEntregas.setLocationRelativeTo(this);
-                ventanaRegistroEntregas.setVisible(true);
+                VentanaGestionEntregas ventanaGestionEntregas = new VentanaGestionEntregas(controladorEntregas, controladorPedidos, controladorRepartidores);
+                ventanaGestionEntregas.setLocationRelativeTo(this);
+                ventanaGestionEntregas.setVisible(true);
             });
         });
 

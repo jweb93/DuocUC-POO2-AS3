@@ -17,7 +17,7 @@ import java.time.LocalTime;
  * Permite consultar, registrar, editar y eliminar entregas, asociando
  * pedidos y repartidores con una fecha y hora programadas.
  */
-public class VentanaRegistroEntregas extends JFrame {
+public class VentanaGestionEntregas extends JFrame {
     private JPanel panelEntregas;
     private JButton btnEditar;
     private JButton btnAgregar;
@@ -45,7 +45,7 @@ public class VentanaRegistroEntregas extends JFrame {
     private DefaultTableModel modeloTabla;
     private int registroSeleccionado = -1; // Índice del registro seleccionado en tabla
 
-    public VentanaRegistroEntregas(ControladorEntregas controladorEntregas, ControladorPedidos controladorPedidos, ControladorRepartidores controladorRepartidores){
+    public VentanaGestionEntregas(ControladorEntregas controladorEntregas, ControladorPedidos controladorPedidos, ControladorRepartidores controladorRepartidores){
         this.controladorEntregas = controladorEntregas;
         this.controladorPedidos = controladorPedidos;
         this.controladorRepartidores = controladorRepartidores;
@@ -377,6 +377,9 @@ public class VentanaRegistroEntregas extends JFrame {
         for(Repartidor repartidor : controladorRepartidores.getRepartidores()){
             cmbRepartidor.addItem(repartidor);
         }
+
+        cmbPedido.setSelectedIndex(-1);
+        cmbRepartidor.setSelectedIndex(-1);
     }
 
     /**

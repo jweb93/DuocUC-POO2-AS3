@@ -68,7 +68,7 @@ src
 │   │       ├── VentanaGestionRepartidores.form
 │   │       ├── VentanaGestionRepartidores.java
 │   │       ├── VentanaPrincipal.java
-│   │       ├── VentanaRegistroEntregas.form
+│   │       ├── VentanaGestionEntregas.form
 │   │       └── VentanaRegistroEntregas.java
 │   └── resources
 └── test
