@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="vista.VentanaGestionRepartidores">
+  <grid id="27dc6" binding="panelRepartidores" layout-manager="GridLayoutManager" row-count="4" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="20" left="20" bottom="20" right="20"/>
+    <constraints>
+      <xy x="20" y="20" width="694" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="289de" class="javax.swing.JLabel" binding="lblNombre">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Nombre:"/>
+        </properties>
+      </component>
+      <component id="8e3d5" class="javax.swing.JTextField" binding="txtNombre">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="70" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <columns value="0"/>
+          <horizontalAlignment value="2"/>
+        </properties>
+      </component>
+      <component id="f6b42" class="javax.swing.JLabel" binding="lblSubtitulo">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Lista de repartidores:"/>
+        </properties>
+      </component>
+      <grid id="7d780" layout-manager="GridLayoutManager" row-count="1" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="4" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="40757" class="javax.swing.JButton" binding="btnEditar">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Editar"/>
+            </properties>
+          </component>
+          <component id="625a2" class="javax.swing.JButton" binding="btnAgregar">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Agregar"/>
+            </properties>
+          </component>
+          <component id="77a7b" class="javax.swing.JButton" binding="btnEliminar">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Eliminar"/>
+            </properties>
+          </component>
+          <component id="8b012" class="javax.swing.JButton" binding="btnLimpiar">
+            <constraints>
+              <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Limpiar"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <scrollpane id="d4ac1" binding="jspTabla">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="4" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="990cc" class="javax.swing.JTable" binding="tblRepartidores">
+            <constraints/>
+            <properties/>
+          </component>
+        </children>
+      </scrollpane>
+    </children>
+  </grid>
+</form>
